@@ -6,9 +6,10 @@ arXiv:2304.13395
 '''
 #Constructs Random Matrix Product States
 #Converts mps to Left/Right Canonical Forms using reshape and svd
-#uses einsum from numpy for tensor contractions
+#Uses einsum from numpy for tensor contractions
 import numpy as np
 
+#Creates a random MPS takes the number of sites N, the physical dimension d and the bond dimension D as input.
 def Random_MPS(N,d,D):
     Mrand=[]
     Mrand.append(np.random.rand(1,d,D))         #tensor at left edge
