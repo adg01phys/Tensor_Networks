@@ -1,4 +1,4 @@
-#DMRG for spin-1 Heisenberg Model
+#1-site dmrg for spin-1 Heisenberg Model
 
 import numpy as np
 from scipy.sparse.linalg import eigsh
