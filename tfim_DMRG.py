@@ -126,7 +126,7 @@ def tfiMPO(N,h):
     Hl[1,:,0,:] = sz
     Hl[2,:,0,:] = h*sx
     Hl[2,:,1,:] = -sz
-    Hl[2,:,2,:] = -I2
+    Hl[2,:,2,:] = I2
     H = [Hl for l in range(N)]
     H[0] = Hl[-1:np.shape(Hl)[0],:,:,:]
     H[N-1] = Hl[:,:,0:1,:]
