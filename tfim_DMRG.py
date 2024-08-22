@@ -106,7 +106,7 @@ def dmrg_1site_obc(H,D,Nsweeps):
             Ens.append(val[0])
             Taux2 = np.reshape(vec,(np.shape(Taux)[0],np.shape(Taux)[1]*np.shape(Taux)[2]))
             U,S,V_dag = np.linalg.svd(Taux2,full_matrices=False)
-            M[l] = np.reshape(V_dag,(np.shape(V_dag)[0],np.shape(M[l])[1],np.shape(M[l])[2]))
+            M[l] = np.reshape(V_dag,(np.shape(Taux)[0],np.shape(Taux)[1],np.shape(Taux)[2]))
             US = np.matmul(U,np.diag(S))
             if l>0:
                 M[l-1] = np.einsum('ijk,kl',M[l-1],US)
